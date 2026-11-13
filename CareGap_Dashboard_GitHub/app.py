@@ -469,7 +469,7 @@ elif page == 3:
                     st.warning("Facility overlay file not found. Add georgia_mammography_facilities_with_coordinates.csv next to app.py.")
                 else:
                     fig.add_trace(go.Scattermapbox(lat=facilities["Latitude"], lon=facilities["Longitude"], mode="markers",
-                        marker=dict(size=9, color="#FFFFFF", opacity=.98),
+                      marker=dict(size=9, color="#00E5FF", opacity=.98),
                         text=facilities.get("Facility_Name", pd.Series(["Mammography facility"] * len(facilities))).astype(str),
                         hovertemplate="Mammography facility<br>%{text}<extra></extra>", name=f"Geocoded facilities ({len(facilities)})"))
                     st.caption(f"Facility overlay: {len(facilities)} geocoded facilities shown; the 311-facility source list is not fully geocoded.")
